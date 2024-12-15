@@ -5,8 +5,8 @@ const fs = require('fs');
 
 async function transcribe(url) {
     const response = await axios.get(url, { responseType: 'arraybuffer' });
-    const audioFile = './temp_audio.mp3';
-    fs.writeFileSync(audioFile, response.data);
+    const audiofile = './temp_audio.mp3';
+    fs.writeFileSync(audiofile, response.data);
     return 'dummy transcription text';
 }
 
